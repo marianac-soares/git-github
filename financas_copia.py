@@ -25,3 +25,8 @@ df_funcionarios = pd.DataFrame({
 
 salario_medio_por_idade = df_funcionarios.groupby('idade')['salário'].mean()
 print(salario_medio_por_idade)
+
+
+print('O salário médio por idade é:')
+for idade, salario_medio in salario_medio_por_idade.items():
+    print(f'Idade: {idade}, Salário médio: {salario_medio:.2f}')
